@@ -1,0 +1,25 @@
+
+# User-specific stuff:
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+.idea/compiler.xml
+.idea/libraries/*
+.idea/*
+
+suyash-pimple-gurav.iml
+
+# Sensitive or high-churn files:
+.idea/*
+
+*.iml
+
+
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+out/
+target/*
