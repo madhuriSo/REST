@@ -1,24 +1,36 @@
-package com.sd.model;
+package com.sd.Entity;
 
-import com.sun.org.apache.regexp.internal.RE;
+import javax.persistence.*;
 
-public class RegisterModel {
+@Entity
+@Table(name="register")
+public class RegisterEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
 
+    @Column(nullable=false)
     private String fName;
+
+    @Column
     private String lName;
+
+    @Column
     private String email;
+
+    @Column
     private String address;
 
-    public RegisterModel(String name,String l, String e,String a){
-        this.fName=name;
-        this.lName=l;
-        this.email=e;
-        this.address=a;
-    }
-    public RegisterModel(){
-
+    public RegisterEntity(String fName, String lName, String email, String address) {
+        this.fName = fName;
+        this.lName = lName;
+        this.email = email;
+        this.address = address;
     }
 
+    public RegisterEntity(){
+
+    }
     public String getfName() {
         return fName;
     }
@@ -53,11 +65,19 @@ public class RegisterModel {
 
     @Override
     public String toString() {
-        return "RegisterModel{" +
+        return "RegisterEntity{" +
                 "fName='" + fName + '\'' +
                 ", lName='" + lName + '\'' +
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
                 '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
